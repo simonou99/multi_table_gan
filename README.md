@@ -8,3 +8,5 @@ This repository contains the implementation of a Generative Adversarial Network 
 - Preserve statistical properties within each individual table
 - Customizable generator models for each table
 - Extensible architecture for adding more advanced models and loss functions
+
+*CODE WORK IN PROGRESS*
