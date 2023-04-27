@@ -6,9 +6,9 @@ This is done by combining the idea of WGAN (Wasserstein-GAN) and cGAN (Condition
 
 Hence, with a relational metadata or similar, we can first generate only the primary keys and foreign keys to ensure we have the correct cardinality and relations, then input them into the GAN to generate the corresponding relational tables.  
 
-The best part is, it supports hybrid models within the same collection of relational tables, i.e. you can use a RNN based model specifically for sequential or time series table, and use a standard one for a normal table, with customizable parameters and model architecuals for individual table, but still preserve the relations within the collection.  
+The best part is, it supports hybrid models within the same collection of relational tables, i.e. you can use a CNN or RNN based model specifically for sequential or time series table, and use a standard one for a normal table, with customizable parameters and model architecuals for individual table, but still preserve the relations within the collection.  
 
-This method also uses KDE (kernel density estimation) to generate data to have distribution that is as similar as possible to its corresponding real data. (or other methods which user can specify, e.g. interpolation)  
+This method also uses traditional probabilistic function such as KDE or CDF to generate data to have distribution that is as similar as possible to its corresponding real data. (or other methods which user can specify, e.g. interpolation)  
 A sample of the Auckland GTFS data collection (public data) is currently used for testing purpose.
 
 *CODE WORK IN PROGRESS*
