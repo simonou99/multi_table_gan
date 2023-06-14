@@ -1,14 +1,13 @@
 # Multi-Table GAN
 
-This repository contains the proof-of-concept methodology of a Generative Adversarial Network (GAN) for generating synthetic data from multiple relational tables while preserving both the statistical properties within each individual table and the relationships between them.  
+This repository presents a working POC methodological prototype of a KDE-hybrid GAN framework, that can generate synthetic relational data (i.e. graph data).
 
-This is done by combining the idea of WGAN (Wasserstein-GAN) and cGAN (Conditional GAN). It uses wasserstein loss with gradient clipping for faster learning and performance optimization. While a traditional GAN is trained on the whole data regardless of the content, this method takes the idea of cGAN which also takes an array of labels in to account during training, but with a twist. Since we want to preserve the inter-table relations, instead of taking an array of labels like in a standard cGAN as inputs, this GAN takes a dataframe of primary key and foreign keys as composite labels. In this case, this essentially making it 'reverse-predict' the likely features of a composite label, i.e. generates the corresponding synthetic table of a composite key of primary key and foreign keys.  
+It combines the mechanisms of WGAN+GP, cGAN, DCGAN and KDE, for obtaining fast learning and generation speed, with the ability to mimic inter-table relational properties, as well as in-table statistical properties e.g. trend, distribution, etc. Thanks to the implementation of deep-CNN layers, it also enables the prototype's ability to learn/generate time-series data.
 
-Hence, with a relational metadata or similar, we can first generate only the primary keys and foreign keys to ensure we have the correct cardinality and relations, then input them into the GAN to generate the corresponding relational tables.  
+More in detail about the mechanisms, it divides the training tasks into using KDEs and GAN. It uses KDE to obtain the parent-child key-column distributions and the categorical-column distributions within each table. Then it uses cGANs to train on the numeric columns of each table, with key and categorical columns of that table as the GAN input. Such that, after training, for each table, it will have a KDE model that can generate its key columns and categorical columns, as well as a GAN-generator model that takes the generated keys and categories as input generate the more nuanced numeric columns. To make sure that the foreign keys in each child table does come from its parent model, we use the technique of interpolation, to interpolate the foreign key columns to have the correct range of keys without affecting the column distributions.
 
-The best part is, it supports hybrid models within the same collection of relational tables, i.e. you can use a CNN or RNN based model specifically for sequential or time series table, and use a standard one for a normal table, with customizable parameters and model architecuals for individual table, but still preserve the relations within the collection.  
+This prototype can achieve a score >80% with SDV's multi-table metrics.
 
-This method also uses traditional probabilistic function such as KDE or CDF to generate data to have distribution that is as similar as possible to its corresponding real data. (or other methods which user can specify, e.g. interpolation)  
-A sample of the Auckland GTFS data collection (public data) is currently used for testing purpose.
+The prototype was mainly tested on the [Auckland GTFS data]([https://duckduckgo.com](https://at.govt.nz/about-us/at-data-sources/general-transit-feed-specification/)), as well as collections from SDV.
 
-*CODE WORK IN PROGRESS*
+*CODE WIP*
