@@ -1,6 +1,6 @@
 # Multi-Table GAN
 
-This repository presents a working POC methodological prototype of a KDE-hybrid GAN framework, that can generate synthetic relational data (i.e. graph data).
+This repository presents a POC methodological prototype of a KDE-hybrid GAN framework, that can generate synthetic relational data (i.e. graph data).
 
 It combines the mechanisms of WGAN+GP, cGAN, DCGAN and KDE, for obtaining fast learning and generation speed, with the ability to mimic inter-table relational properties, as well as in-table statistical properties e.g. trend, distribution, etc. Thanks to the implementation of deep-CNN layers, it also enables the prototype's ability to learn/generate time-series data.
 
