@@ -8,6 +8,12 @@ More in detail about the mechanisms, it divides the training tasks into using KD
 
 This prototype can achieve a score >80% with SDV's multi-table metrics.
 
-The prototype was mainly tested on the [Auckland GTFS data]([https://duckduckgo.com](https://at.govt.nz/about-us/at-data-sources/general-transit-feed-specification/)), as well as collections from SDV.
+The prototype was mainly tested on the [Auckland GTFS data](https://at.govt.nz/about-us/at-data-sources/general-transit-feed-specification/), as well as collections from SDV.
 
 Documentations are written as docstrings and comments in the [`main_prototype.ipynb`](https://github.com/simonou99/multi_table_gan/blob/main/main_prototype.ipynb) notebook.
+
+The [`main_metrics.ipynb`](https://github.com/simonou99/multi_table_gan/blob/main/main_metrics.ipynb) notebook presents the metric results.
+
+However, [`main_benchmark.ipynb`](https://github.com/simonou99/multi_table_gan/blob/main/main_benchmark.ipynb) notebook was scrapped, as the benchmark-against HMA model from SDV took over 1.5 hours but still showed no progress, in which the training process of HMA was stopped.
+
+The `bm_#DataName.ipynb` presents the implementation of the same prototype on collections from SDV, as well as the benchmark results.
