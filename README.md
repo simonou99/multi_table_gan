@@ -10,4 +10,4 @@ This prototype can achieve a score >80% with SDV's multi-table metrics.
 
 The prototype was mainly tested on the [Auckland GTFS data]([https://duckduckgo.com](https://at.govt.nz/about-us/at-data-sources/general-transit-feed-specification/)), as well as collections from SDV.
 
-*CODE WIP*
+Documentations are written as docstrings and comments in the [`main_prototype.ipynb`](https://github.com/simonou99/multi_table_gan/blob/main/main_prototype.ipynb) notebook.
