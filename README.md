@@ -14,6 +14,6 @@ Documentations are written as docstrings and comments in the [`main_prototype.ip
 
 The [`main_metrics.ipynb`](https://github.com/simonou99/multi_table_gan/blob/main/main_metrics.ipynb) notebook presents the metric results.
 
-However, [`main_benchmark.ipynb`](https://github.com/simonou99/multi_table_gan/blob/main/main_benchmark.ipynb) notebook was scrapped, as the benchmark-against HMA model from SDV took over 1.5 hours but still showed no progress, in which the training process of HMA was stopped.
+[`main_benchmark.ipynb`](https://github.com/simonou99/multi_table_gan/blob/main/main_benchmark.ipynb) notebook was scrapped. Originally, the protype is to be benchmarked with the HMA model from SDV. However, HMA took over 1.5 hours but still showed no progress, in which the training process was stopped.
 
-The `bm_#DataName.ipynb` presents the implementation of the same prototype on collections from SDV, as well as the benchmark results.
+The `bm_#DataName.ipynb` and `bm_#DataName_benchmark.ipynb` present the implementation of the prototype on data collections from SDV and the benchmark metrics results, in which both the prototype and HMA were able to run.
