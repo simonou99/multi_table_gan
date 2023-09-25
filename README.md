@@ -17,3 +17,5 @@ The [`main_metrics.ipynb`](https://github.com/simonou99/multi_table_gan/blob/mai
 [`main_benchmark.ipynb`](https://github.com/simonou99/multi_table_gan/blob/main/main_benchmark.ipynb) notebook was scrapped. Originally, the protype is to be benchmarked with the HMA model from SDV. However, HMA took over 1.5 hours but still showed no progress, in which the training process was stopped.
 
 The `bm_#DataName.ipynb` and `bm_#DataName_benchmark.ipynb` present the implementation of the prototype on data collections from SDV and the benchmark metrics results, in which both the prototype and HMA were able to run. Variable names in the `bm` notebooks are slight different. They are naming-wise older versions, but actually have the same code logic, in which compared to `main_prototype.ipynb`, it was edited to be more readable with included docstrings, essentially they have the same prototype mechanisms.
+
+Dissertation/thesis link [here](https://drive.google.com/file/d/18XoXKrl9zOdTaO2f6OuP4VsdWDQc2nZS/view?usp=sharing).
